@@ -1,0 +1,33 @@
+body {
+  background: url("../img/bg.jpg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.btn {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+.p-4 {
+  font-size: 1.7rem;
+}
+p {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
