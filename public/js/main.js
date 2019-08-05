@@ -5,7 +5,8 @@ const dt = document.querySelector("p");
 form.addEventListener("submit", e => {
   e.preventDefault();
 
-  fetch(`http://localhost:3000/weather?search=${input.value}`).then(
+  //http://localhost:3000 for local
+  fetch(`/weather?search=${input.value}`).then(
     response => {
       response.json().then(data => {
         console.log(data.temperature);

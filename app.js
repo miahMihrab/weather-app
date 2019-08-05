@@ -7,7 +7,7 @@ const forecast = require("./src/utils/forecast");
 const publicDir = path.join("public");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 //set static dir
 app.use(express.static(publicDir));
 
@@ -53,4 +53,4 @@ app.get("/weather", (req, res) => {
   }
 });
 
-app.listen(PORT, console.log(`Server started at port: ${PORT}`));
+app.listen(port, console.log(`Server started at port: ${port}`));
