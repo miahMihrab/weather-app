@@ -35,10 +35,15 @@ p {
   color: #fff;
 }
 
-footer {
-  margin-top: 93%;
+span {
+  padding: 10px;
+  color: #fff;
 }
 
-span {
-  color: #fff;
+footer {
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
 }
