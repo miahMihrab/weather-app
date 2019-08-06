@@ -32,18 +32,20 @@ app.get("/weather", (req, res) => {
       error: "Please send valid address"
     });
   } else {
-    console.log(req.query.search);
     geoCode(req.query.search, (err, data) => {
       if (err) throw err;
       else {
         forecast(data.lattitude, data.longitude, (err, dt) => {
           if (err) {
-            console.log(`Errrror: ${err}`);
+            return res.send({
+              error: err
+            })
           } else {
             res.send({
-              temperature: dt.temperature,
+              temperature: `${((dt.temperature -32)/1.8).toFixed(2)}C`,
               precip_type: dt.precipType,
               precipProbability: dt.precipProbability,
+              location: data.location,
               summary: dt.summary
             });
           }

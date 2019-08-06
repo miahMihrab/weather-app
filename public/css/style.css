@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  padding: 0;
   background: url("../img/bg.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -26,8 +28,17 @@ body::before {
 .p-4 {
   font-size: 1.7rem;
 }
+
 p {
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+footer {
+  margin-top: 93%;
+}
+
+span {
   color: #fff;
 }

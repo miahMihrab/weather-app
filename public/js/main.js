@@ -9,13 +9,18 @@ form.addEventListener("submit", e => {
   fetch(`/weather?search=${input.value}`).then(
     response => {
       response.json().then(data => {
-        console.log(data.temperature);
-        dt.innerHTML = `Temperature: ${data.temperature}<br>Precip Type: ${
+
+        if (data.error) {
+
+          dt.innerHTML = data.error;
+        } else {
+          dt.innerHTML = `Temperature: ${data.temperature}<br>Precip Type: ${
           data.precip_type
         }<br>Precip Probability: ${data.precipProbability}<br>Summary: ${
-          data.summary
-        }`;
+          data.summary}<br>Address: ${data.location}`;
+        }
       });
+
     }
   );
 });
