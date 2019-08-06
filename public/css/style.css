@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  overflow-x: hidden
 }
 
 body::before {
@@ -39,15 +40,36 @@ p {
   color: #fff;
 }
 
-span {
-  padding: 10px;
-  color: #fff;
-}
-
 footer {
+
   left: 0;
   bottom: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  padding: 10px;
+  border-top: 0.3px solid #A9A9A9;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: -10px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .p-4 {
+    font-size: 1rem;
+    padding: 1rem !important;
+  }
+
+  p {
+    padding: 8px;
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  footer {
+    display: none;
+  }
 }
